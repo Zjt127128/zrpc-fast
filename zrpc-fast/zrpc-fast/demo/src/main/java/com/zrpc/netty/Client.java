@@ -8,10 +8,11 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 
-public class Client {
+public class Client implements Serializable {
     public void run(){
         //定义干活的线程池，I/O线程池
         NioEventLoopGroup eventExecutors = new NioEventLoopGroup();
